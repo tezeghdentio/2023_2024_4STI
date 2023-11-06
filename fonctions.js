@@ -37,6 +37,7 @@ function verifNum(ch)
 function verifMail(ch)
 {
     posat=ch.indexOf("@");
+    alert(posat);
     poslastat=ch.lastIndexOf("@");
     pospt=ch.indexOf(".");
     test=true
