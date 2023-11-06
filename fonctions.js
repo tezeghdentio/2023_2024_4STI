@@ -56,10 +56,6 @@ function verif()
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
     i=document.getElementById("paysnaiss").selectedIndex;
-    j=document.getElementById("pays1").option[1].va;
-
-    alert(j);
-   
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
