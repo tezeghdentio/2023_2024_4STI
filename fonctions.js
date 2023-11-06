@@ -85,5 +85,6 @@ function verif()
                         {
                             alert("veuillez choisir un pays");
                         }
+                        alery
 
 }
