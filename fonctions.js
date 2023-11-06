@@ -55,7 +55,8 @@ function verif()
     date_naiss=document.getElementById("date_naiss").value;
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
-    alert(nom+prenom);
+    i=document.getElementById("pays").selectedIndex;
+    alert(i);
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
@@ -70,5 +71,4 @@ function verif()
             {
                 alert("Verifier votre adresse email");
             }
-            
 }
