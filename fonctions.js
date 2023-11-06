@@ -34,14 +34,41 @@ function verifNum(ch)
     }
     return(test);
 }
-
+function verifMail(ch)
+{
+    posat=ch.indexOf("@");
+    poslastat=ch.lastIndexOf("@");
+    pospt=ch.indexOf(".");
+    test=true
+    if( (posat<1)|| (posat!=poslastat) || (pospt<=posat+1) ||(pospt==(ch.length)-1))
+    {
+        test=false;
+    }
+    return(test);
+}
 function verif()
 {
+    login=document.getElementById("login").value;
+    passwd=document.getElementById("passwd").value;
     nom=document.getElementById("nom").value;
     prenom=document.getElementById("prenom").value;
-
-    if((verifTxt(nom)==false) ||(verifTxt(prenom)==false) )
+    date_naiss=document.getElementById("date_naiss").value;
+    tel=document.getElementById("tel").value;
+    email=document.getElementById("mail").value;
+    alert(nom+prenom);
+    if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
     }
+    else
+        if(!verifNum(tel))
+        {
+            alert("verifier votre téléphone");
+        }
+        else
+            if(!verifMail(email))
+            {
+                alert("Verifier votre adresse email");
+            }
+            
 }
