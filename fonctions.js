@@ -37,7 +37,6 @@ function verifNum(ch)
 function verifMail(ch)
 {
     posat=ch.indexOf("@");
-    alert(posat);
     poslastat=ch.lastIndexOf("@");
     pospt=ch.indexOf(".");
     test=true
@@ -56,8 +55,11 @@ function verif()
     date_naiss=document.getElementById("date_naiss").value;
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
-    i=document.getElementById("pays").selectedIndex;
-    alert(i);
+    i=document.getElementById("paysnaiss").selectedIndex;
+    j=document.getElementById("pays1").option[1].va;
+
+    alert(j);
+   
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
@@ -72,4 +74,20 @@ function verif()
             {
                 alert("Verifier votre adresse email");
             }
+            else
+                if( (document.getElementById("homme").checked==false)&&(!document.getElementById("femme").checked))
+                {
+                    alert("veuillez choisir un sexe");
+                }
+                else
+                    if( (!document.getElementById("foot").checked) && (!document.getElementById("hand").checked) && (!document.getElementById("tennis").checked))
+                    {
+                        alert("Veuillez choisir un sport");
+                    }
+                    else
+                        if(i==0)
+                        {
+                            alert("veuillez choisir un pays");
+                        }
+
 }
