@@ -41,13 +41,14 @@ function verifMail(ch)
     pospt=ch.indexOf(".");
     test=true
     if( (posat<1)|| (posat!=poslastat) || (pospt<=posat+1) ||(pospt==(ch.length)-1))
-    {
+    {-
         test=false;
     }
     return(test);
 }
 function verif()
 {
+    
     login=document.getElementById("login").value;
     passwd=document.getElementById("passwd").value;
     nom=document.getElementById("nom").value;
@@ -56,6 +57,8 @@ function verif()
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
     i=document.getElementById("paysnaiss").selectedIndex;
+    pays1=document.getElementById("pays1").value;
+    alert(pays1);
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
@@ -85,6 +88,6 @@ function verif()
                         {
                             alert("veuillez choisir un pays");
                         }
-                        alery
+                        
 
 }
