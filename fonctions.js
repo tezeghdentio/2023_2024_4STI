@@ -41,7 +41,7 @@ function verifMail(ch)
     pospt=ch.indexOf(".");
     test=true
     if( (posat<1)|| (posat!=poslastat) || (pospt<=posat+1) ||(pospt==(ch.length)-1))
-    {-
+    {
         test=false;
     }
     return(test);
@@ -57,7 +57,7 @@ function verif()
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
     i=document.getElementById("paysnaiss").selectedIndex;
-    pays1=document.getElementById("pays1").value;
+    pays1=document.getElementById("pays1").selectedIndex;
     alert(pays1);
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
