@@ -48,6 +48,7 @@ function verifMail(ch)
 }
 function verif()
 {
+    
     login=document.getElementById("login").value;
     passwd=document.getElementById("passwd").value;
     nom=document.getElementById("nom").value;
@@ -56,6 +57,8 @@ function verif()
     tel=document.getElementById("tel").value;
     email=document.getElementById("mail").value;
     i=document.getElementById("paysnaiss").selectedIndex;
+    pays1=document.getElementById("pays1").selectedIndex;
+    alert(pays1);
     if((verifTxt(nom)==false) ||(!verifTxt(prenom)) )
     {
         alert("verifier votre nom ou prenom");
@@ -85,5 +88,6 @@ function verif()
                         {
                             alert("veuillez choisir un pays");
                         }
+                        
 
 }
